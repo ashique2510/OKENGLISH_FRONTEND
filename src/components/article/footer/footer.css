@@ -1,0 +1,23 @@
+.footer_container {
+    max-width: 95%;
+    margin: auto;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer_boxItems {
+    border: 1px solid #8f8a8a;
+    border-radius: 12px;
+    padding: 20px;
+    background:  #040C18;
+    margin: 5px;
+    
+  }
+  .footer_icon{
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+  }

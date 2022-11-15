@@ -1,0 +1,60 @@
+.singlePage {
+    padding: 50px 0;
+    background: #040C18;
+  }
+
+  .details_container{
+    max-width: 95%;
+    margin: auto;
+  }
+  .singlePage .right {
+    margin-top: 30px;
+  }
+  .singlePage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .singlePage h1 {
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+  }
+  .singlePage p {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 2;
+    text-transform: capitalize;
+  }
+  .singlePage .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .singlePage .button {
+    margin-left: 20px;
+    border: none;
+  }
+  .singlePage .button:nth-child(1) {
+    background: #10ac84;
+  }
+  .singlePage .button:nth-child(2) {
+    background: #ee5253;
+  }
+  .button {
+    background: #212121;
+    border: 1px solid;
+    border-color: #212121;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 400;
+    height: 48px;
+    line-height: 1;
+    padding: 15px 28px;
+  }
+  
+  .authorName{
+    color: blue;
+    text-decoration: underline;
+    background: rgb(155, 220, 250);
+  }

@@ -1,0 +1,116 @@
+.account_container{
+  max-width: 95%;
+  margin: auto;
+}
+
+.accountInfo {
+    margin: 115px 0;
+    
+  }
+  .accountInfo .account_container {
+    padding: 50px;
+    max-width: 60%;
+    margin: auto;
+  }
+  .account_container h1{
+    color: white;
+  }
+  .accountInfo .account_content {
+    margin-top: 40px;
+    display: flex;
+    /* justify-content: flex-start; */
+  }
+  .accountInfo .left {
+    width: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .accountInfo .right {
+    width: 100%;
+  }
+  
+
+  .accountInfo .right label {
+    font-size: 17px;
+    color: #000;
+    margin-bottom: 10px;
+    display: block;
+  }
+  /* form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  form span {
+    margin-bottom: 20px;
+  } */
+  form textarea,
+  .accountInfo .right input,
+  form input {
+    border: 1px solid #212121;
+    border-radius: 6px;
+    color: #212121;
+    font-size: 15px;
+    min-height: 44px;
+    padding: 0 20px;
+    transition: border-color 0.2s ease;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .BoxItems {
+    border: 1px solid  #8b7d7d;
+    border-radius: 12px;
+    padding: 20px;
+    background:  #8b7d7d
+  }
+  .imgDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgDiv img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+  .accountInfo_heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .cloudinary_imgSet{
+    margin-top: 15px;
+    background: #ec6a1e;
+    border-radius: 10px;
+    border: navajowhite;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: large;
+    height: 48px;
+    line-height: 1;
+    padding: 15px 28px;
+  }
+
+.cloudinary_button{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  @media screen and (max-width: 768px) {
+
+  .accountInfo .account_container {
+    padding: 20px;
+    max-width: 85%;
+    margin: auto;
+  }
+  }
+  
