@@ -36,7 +36,7 @@ export default function Chat() {
   }, []);
   useEffect(() => {
     if (currentUser) {
-      socket.current = io(process.env.host);
+      socket.current = io(process.env.SERVER_CONNECTION);
       socket.current.emit("add-user", currentUser._id);
     }
   }, [currentUser]);

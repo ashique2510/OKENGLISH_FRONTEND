@@ -1,4 +1,4 @@
-export const host = process.env.host
+export const host = process.env.SERVER_CONNECTION
 
 export const createArticle = `${host}/api/article/create`
 
