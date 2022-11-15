@@ -1,11 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_URL ='/api/users/allusers'
+const host = "https://ruby-jolly-hippopotamus.cyclic.app"
+
+const API_URL =`${host}/api/users/allusers`
 
 
 export const getContact = createAsyncThunk('api/contactInfo',()=>{
-console.log('from reducerrrrrrrrrrrrrrr');
+    
 const user= JSON.parse(localStorage.getItem('user'))
 const accessToken = user.token
 

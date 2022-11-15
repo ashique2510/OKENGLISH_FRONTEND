@@ -1,4 +1,6 @@
-export const host = process.env.SERVER_CONNECTION
+export const host = "https://ruby-jolly-hippopotamus.cyclic.app"
+
+
 
 export const createArticle = `${host}/api/article/create`
 

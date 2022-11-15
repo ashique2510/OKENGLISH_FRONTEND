@@ -1,7 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_URL = '/api/tutor/getAllTutors'
+const host = "https://ruby-jolly-hippopotamus.cyclic.app"
+
+const API_URL = `${host}/api/tutor/getAllTutors`
 
 
 export const getTutorInfo = createAsyncThunk('api/tutorInfo',() => {

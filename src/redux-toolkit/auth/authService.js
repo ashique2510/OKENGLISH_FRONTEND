@@ -1,7 +1,8 @@
 import axios from 'axios'
+const host = "https://ruby-jolly-hippopotamus.cyclic.app"
 
-const API_URL = '/api/users'
-const API_URL_LOGIN = '/api/users/login'
+const API_URL = `${host}/api/users`
+const API_URL_LOGIN =`${host}/api/users/login`
 
 
 // Register user

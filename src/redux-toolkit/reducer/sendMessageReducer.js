@@ -1,7 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_URL = '/api/messages/addmsg'
+const host = "https://ruby-jolly-hippopotamus.cyclic.app"
+
+const API_URL = `${host}/api/messages/addmsg`
 
 export const sendMessage = createAsyncThunk('api/sendMessage',( Details ) => {
 
