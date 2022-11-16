@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FaSignInAlt } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { login,reset  } from '../../redux-toolkit/auth/authSlice'
 import './Login.css'
@@ -98,6 +98,14 @@ function Login() {
             </button>
           </div>
         </form>
+
+        <div className='create_acc_div'>
+          <p>Please regester if you dont have an account</p>
+         <Link to={'/signUp'}> <button type='button' className='create_btn_fromLogin'>
+            Register
+          </button>
+          </Link>
+        </div>
       </section>
     </>
   )

@@ -52,13 +52,12 @@ const TrainersList = () => {
            sx={{color:'white', fontSize:'30px'}}        
           gutterBottom
         >
-          Find a Tutor
+          Choose your own tutor
         </Typography>
         <Typography variant="h5" align="center"  sx={{color:'white'}} paragraph>
-          Something short and leading about the collection below—its contents,
-          the creator, etc. simply skip over it entirely.
+        Choose the tutor that has the personality, professional experience, or focus area you need!
         </Typography>
-        <Stack
+        {/* <Stack
           sx={{ pt: 4 }}
           direction="row"
           spacing={2}
@@ -66,7 +65,7 @@ const TrainersList = () => {
         >
           <Button  sx={{color:'white'}} variant="contained">Main call to action</Button>
           <Button  sx={{color:'white'}} variant="outlined">Secondary action</Button>
-        </Stack>
+        </Stack> */}
       </Container>
 
       

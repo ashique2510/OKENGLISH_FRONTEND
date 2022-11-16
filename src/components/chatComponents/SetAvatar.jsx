@@ -9,6 +9,7 @@ import loader from '../../assets/loader.gif'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import Navbar from '../navbar/Navbar';
 
 
 
@@ -86,11 +87,18 @@ export default function SetAvatar() {
   return (
     <>
       {isLoading ? (
+        <>
+        <Navbar />
         <Container>
           <img src={loader} alt="loader" className="loader" />
+          <span style={{color:'red' ,textAlign:'center' ,fontSize:'20px'}}>Please wait few seconds !!</span>
         </Container>
+        </>
       ) : (
+        <>
+        <Navbar />
         <Container>
+          
           <div className="title-container">
             <h1>Pick an Avatar as your profile picture</h1>
           </div>
@@ -117,6 +125,7 @@ export default function SetAvatar() {
           </button>
           <ToastContainer />
         </Container>
+        </>
       )}
     </>
   );

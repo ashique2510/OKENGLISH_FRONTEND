@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
 import { register,reset  } from '../../redux-toolkit/auth/authSlice'
@@ -128,6 +128,14 @@ function SignUp() {
             </button>
           </div>
         </form>
+
+        <div className='login_acc_div'>
+          <p>Please login if you alredy have an account</p>
+         <Link to={'/login'}> <button type='button' className='login_btn_fromSignUp'>
+            Login
+          </button>
+          </Link>
+        </div>
       </section>
     </>
   )

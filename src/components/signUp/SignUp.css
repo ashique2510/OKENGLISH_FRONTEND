@@ -132,7 +132,7 @@ h3 {
   width: 100%;
   padding: 10px;
   border: 1px solid #e6e6e6;
-  border-radius: 5px;
+  border-radius: 25px;
   margin-bottom: 10px;
   font-family: inherit;
 }
@@ -146,7 +146,7 @@ h3 {
 .btn {
   padding: 10px 20px;
   border: 1px solid #000;
-  border-radius: 5px;
+  border-radius: 25px;
   background: rgb(228, 18, 18);
   color: #fff;
   font-size: 16px;
@@ -190,4 +190,25 @@ h3 {
   .heading p {
     font-size: 1.5rem;
   }
+}
+.login_acc_div{
+  display: flex;
+}
+
+.login_btn_fromSignUp {
+  padding: 10px 25px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  background: rgb(63, 134, 15);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  margin-left: 15px;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
 }

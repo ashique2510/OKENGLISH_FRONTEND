@@ -8,9 +8,13 @@ import announcement from '../../assets/announcment.jpg'
 import chatImage from '../../assets/chatimage.jpg'
 import article from '../../assets/article.png'
 import booking from '../../assets/booking.png'
+import SocialMedia from '../../assets/SocialMedia.png'
+import Test from '../../assets/Test.webp'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { getAnnouncement } from '../../utils/ApiRoutes'
+
+import Slider from './Slider'
 
 import Moment from 'react-moment';
 import 'moment-timezone';
@@ -97,6 +101,8 @@ useEffect(() => {
 },[])
 
 
+
+
 // useEffect(()=>{
 //   setInterval(()=>{
 //        setSelectedImage(selectedImage => selectedImage < 2 ? selectedImage + 1 : 0)
@@ -121,6 +127,14 @@ useEffect(() => {
           <img src={people} alt='people'/>
           <p>1,600 people requested access a visit in last 24 hours</p>
          </div> */}
+
+    <div className='okEng__header-image_mobileView'>
+        <Slider />
+      </div> 
+
+
+
+
         <div className="cards" >
           <div className="card_card1"  onClick={handleClickOpen('paper')}>
             <div className="container">
@@ -165,14 +179,45 @@ useEffect(() => {
           </div>
           </Link>
 
+          <Link to={'/#'} >
+          <div className="card_card6">
+            <div className="container">
+              <img src={Test} alt="test" />
+            </div>
+            <div className="details">
+              <h5>Take a test and find your level</h5>
+            </div>
+          </div>
+          </Link>
+
+          <Link to={'/social_media'} >
+          <div className="card_card5">
+            <div className="container">
+              <img src={SocialMedia} alt="socialMedia" />
+            </div>
+            <div className="details">
+              <h5>Connect with us via social media</h5>
+            </div>
+          </div>
+          </Link>
+          
+
         </div>
+
+
       </div>
 
-      <div className="okEng__header-image">
-        <img src={allImages[selectedImage]} alt="headerImage" />
+      {/* .....Slider Started */}
+
+      <div className='okEng__header-image'>
+        <Slider />
       </div>
 
-      {/* // ....................MODAL......................// */}
+      {/* .....Slider Ended */}
+
+
+
+      {/* // ....................MODAL Started......................// */}
 
 
 
@@ -244,7 +289,7 @@ useEffect(() => {
 
 
 
-    {/* // ....................MODAL......................// */}
+    {/* // ....................MODAL End......................// */}
 
 
          

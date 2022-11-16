@@ -14,16 +14,16 @@ const Menu = () => (
     <Link to={'/'}> Home</Link>
     </p>
     <p>
-      <a href="#about">About</a>
+      <Link to={'/social_media'}> About</Link>
     </p>
     <p>
-      <a href="#blog">Blog</a>
+      <Link to={'/booking'}> Booking</Link>
     </p>
     <p>
-      <a href="#basicTest">Basic Test</a>
+      <Link to={'/article_home'}> Article</Link>
     </p>
     <p>
-      <a href="#contact">Contact</a>
+    <Link to={'/setAvatar'}> Chat</Link>
     </p>
   </>
 );
@@ -47,7 +47,7 @@ const onLogout = () => {
       <div className="okEng__navbar-links">
         <div className="okEng__navbar-links_logo">
           {/* <img src={logo} alt="logo" /> */}
-          <h2>OK_ENGLISH</h2>
+          <h2>OK ENGLISH</h2>
         </div>
         <div className="okEng__navbar-links_container">
           <Menu />

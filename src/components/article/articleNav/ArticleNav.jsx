@@ -79,7 +79,7 @@ const onLogout = () => {
       <div className="okEng__navbar-links">
         <div className="okEng__navbar-links_logo">
           {/* <img src={logo} alt="logo" /> */}
-          <h2>OK_ENGLISH</h2>
+          <h2>OK ENGLISH</h2>
         </div>
         <div className="okEng__navbar-links_container">
           <Menu />

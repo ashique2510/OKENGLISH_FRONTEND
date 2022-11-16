@@ -8,6 +8,7 @@ import styled from "styled-components";
 import ChatContainer from '../../components/chatComponents/ChatContainer';
 import Contacts from '../../components/chatComponents/Contacts';
 import Welcome from '../../components/chatComponents/Welcome';
+import { Navbar } from '../../components';
 
 export default function Chat() {
   const navigate = useNavigate();
@@ -63,6 +64,7 @@ export default function Chat() {
   };
   return (
     <>
+    <Navbar />
       <Container>
         <div className="chatContainer">
           <Contacts contacts={contacts} changeChat={handleChatChange} />
