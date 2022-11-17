@@ -19,7 +19,6 @@ import MyAccount from './pages/myAccount/MyAccount';
 import SocialMediaPage from './pages/socialMedia/SocialMediaPage';
 import { Footer } from './components/article/footer/Footer';
 import { Payment } from './components/booking/Payment';
-import Slider from './containers/header/Slider';
 
 
 const App = () => {
