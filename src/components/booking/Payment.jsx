@@ -17,16 +17,31 @@ import { useSelector } from 'react-redux'
 import Moment from 'react-moment';
 import 'moment-timezone';
 import { useEffect } from 'react'
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom'
+
 
 
 export const Payment = () => {
 
+  const navigate = useNavigate()
 
                const [ userData ,setUserData ] = useState({})
 
 	const planDetails = useSelector( state => state.choosedPlan.planSummary)
 	const userDetails = useSelector((state) => state.auth.user)
   const ProfilePic = localStorage.getItem('profilePicUrl');
+
+  useEffect(() => {
+        const user= JSON.parse(localStorage.getItem('user'))
+            if(!user){
+              toast.error('Please register or login before continuing !!', {
+                position: toast.POSITION.TOP_CENTER
+                });
+              navigate('/signUp')
+            }
+  }, [])
+
 
   useEffect(() => {
 
@@ -43,7 +58,7 @@ export const Payment = () => {
   const [book, setBook] = useState({
 		name: "OK ENGLISH",
 		author: "John Green",
-		img: "https://images-na.ssl-images-amazon.com/images/I/817tHNcyAgL.jpg",
+		img: "https://res.cloudinary.com/dtldzc9tg/image/upload/v1668714369/20220725_165815_0000_tzvjts.png",
 		price: planDetails.totalAmount ,
 	});
 

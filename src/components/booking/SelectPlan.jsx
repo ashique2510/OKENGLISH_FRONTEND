@@ -30,6 +30,7 @@ import Moment from 'react-moment';
 import 'moment-timezone';
 import { useDispatch, useSelector } from "react-redux";
 import { addPlans } from "../../redux-toolkit/reducer/bookingReducer";
+import { toast } from 'react-toastify';
 
 
 
@@ -196,11 +197,13 @@ useEffect(() => {
 
        function continueButton () {
 
+
           if(!radioMonth || !radioMinutes || !radioDays || !totalAmount || !startDate){
 
             setClickAndContinue(true)
 
             }
+
             
             if(radioMonth && radioMinutes && radioDays && totalAmount && startDate){
                      

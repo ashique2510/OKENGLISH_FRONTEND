@@ -10,6 +10,7 @@ import Contacts from '../../components/chatComponents/Contacts';
 import Welcome from '../../components/chatComponents/Welcome';
 import { Navbar } from '../../components';
 
+
 export default function Chat() {
   const navigate = useNavigate();
   const dispatch = useDispatch()
@@ -25,7 +26,8 @@ export default function Chat() {
   useEffect( () => {
     async function fetchData() {    
     if (!localStorage.getItem('user')) {
-      navigate("/login");
+      
+      navigate("/signUp");
     } else {
       setCurrentUser(
         await JSON.parse(

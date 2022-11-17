@@ -34,8 +34,12 @@ export default function SetAvatar() {
 
   useEffect( () => {
     async function fetchData() {   
-    if (!localStorage.getItem("user"))
-      navigate("/login");
+    if (!localStorage.getItem("user")){
+    toast.error('Please register or login before chatting with someone !!', {
+      position: toast.POSITION.TOP_CENTER
+      });
+      navigate("/signUp");
+    }
 
       const checkAvatarImg = JSON.parse(localStorage.getItem('user')).isAvatarImageSet
       

@@ -23,7 +23,7 @@ const Menu = () => (
       <Link to='/create_article'>
         <button className="box">
           <RiImageAddLine className="icon"/>
-          <h4>Create Post</h4>
+          <h4>Create Article</h4>
         </button>
       </Link>
       <Link to='/my_account'>

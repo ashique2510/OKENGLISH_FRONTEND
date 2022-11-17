@@ -7,6 +7,7 @@ import axios from 'axios'
 import { createArticle } from "../../../utils/ApiRoutes"
 import { useNavigate } from "react-router-dom"
 import { useSelector } from 'react-redux'
+import { toast } from 'react-toastify';
 
 
  const Create = () => {
@@ -25,6 +26,18 @@ import { useSelector } from 'react-redux'
   const [ imgCheck ,setImgCheck] = useState(false)
 
   const navigate = useNavigate()
+
+    
+    useEffect(() => {
+
+      const user= JSON.parse(localStorage.getItem('user'))
+      if(!user){
+        toast.error('Please register or login before creating article !!', {
+          position: toast.POSITION.TOP_CENTER
+          });
+          navigate('/signUp')
+      }
+    } ,[])
 
     
     const userDetails = useSelector(

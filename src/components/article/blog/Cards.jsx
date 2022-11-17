@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react"
 import "./blog.css"
 import { AiOutlineTags, AiOutlineClockCircle, AiOutlineComment, AiOutlineShareAlt } from "react-icons/ai"
 import { AiFillLike } from 'react-icons/ai'
-import { Link } from "react-router-dom"
+import { Link, Navigate, useNavigate } from "react-router-dom"
 import { addLike } from "../../../utils/ApiRoutes"
 import axios from "axios"
 import { removeLike } from "../../../utils/ApiRoutes"
 
 import Moment from 'react-moment';
 import 'moment-timezone';
+import { toast } from 'react-toastify';
+
 
  // ....................MODAL......................//
 
@@ -37,6 +39,9 @@ import 'moment-timezone';
 
 
 export const Cards = ({article, setLike}) => {
+
+
+  const navigate = useNavigate()
 
 
 // ....................MODAL......................//
@@ -103,14 +108,19 @@ React.useEffect(() => {
 
   // ............chat send input end ...........//
 
+   const [userName, setUserName] =useState('')
 
   let count = 0;
   
+       useEffect(() => {
 
-const user= JSON.parse(localStorage.getItem('user'))
-        const username = user.email
+        const user= JSON.parse(localStorage.getItem('user'))
+        if(user){
+          const username = user.email
+          setUserName(username)
+        }
 
-        
+      } , [])
 
     const addUserLikes = async(clickedUserId) => {
 
@@ -119,10 +129,17 @@ const user= JSON.parse(localStorage.getItem('user'))
                 try{
 
                   const user= JSON.parse(localStorage.getItem('user'))
+                  if(!user){
+                    toast.error('Please register or login before liking this post !!', {
+                      position: toast.POSITION.TOP_CENTER
+                      });
+                    navigate('/signUp')
+                  }else{
                   const username = user.email
         
                  const response = await axios.post(`${removeLike}/${clickedUserId}`,{username:username})
                  setLike((prev)=> !prev)
+                  
 
      if(response.data === 'USER NOT FOUND'){
 
@@ -131,6 +148,7 @@ const user= JSON.parse(localStorage.getItem('user'))
       try{
         
         const user= JSON.parse(localStorage.getItem('user'))
+        
         const username = user.email
         const id = user._id
         
@@ -143,7 +161,7 @@ const user= JSON.parse(localStorage.getItem('user'))
 
 
                      }
-                     
+                    }
                     
 
 
@@ -189,11 +207,11 @@ const user= JSON.parse(localStorage.getItem('user'))
 
 
                 { 
-                  item.likes &&
+                  item.likes && userName &&
 
                   item.likes.map((aa)=>{
 
-                    let ab =  aa.username === username
+                    let ab =  aa.username === userName
             {    if(ab === true){
               
                  count = count +1;
