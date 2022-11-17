@@ -1,9 +1,5 @@
 import React, { useEffect } from 'react'
 import './header.css'
-// import people from '../../assets/people.png'
-import dummy1 from '../../assets/shamseerImg1.png'
-import dummy2 from '../../assets/shamseerImg2.png'
-import dummy3 from '../../assets/shamseerImg3.png'
 import announcement from '../../assets/announcment.jpg'
 import chatImage from '../../assets/chatimage.jpg'
 import article from '../../assets/article.png'
@@ -42,10 +38,7 @@ import { getTutorInfo } from '../../redux-toolkit/reducer/tutorReducer'
 
 const Header = () => {
 
-  console.log('hii');
 
-  const [allImages, setAllImages] = useState([dummy1,dummy2,dummy3])
-  const  [selectedImage, setSelectedImage] = useState(0)
   const [announceData, setAnnounceData] = useState('')
 
   const dispatch = useDispatch()
@@ -146,18 +139,7 @@ useEffect(() => {
             </div>
           </div>
 
-          <Link to={"/setAvatar"}>
-            <div className="card_card2">
-              <div className="container">
-                <img src={chatImage} alt="chatImage" />
-              </div>
-              <div className="details">
-                <h5>Chat with your new friends</h5>
-              </div>
-            </div>
-          </Link>
-
-      <Link to={'/booking'} >
+          <Link to={'/booking'} >
           <div className="card_card4">
             <div className="container">
               <img src={booking} alt="booking" />
@@ -167,6 +149,7 @@ useEffect(() => {
             </div>
           </div>
       </Link>
+
 
       <Link to={'/article_home'} >
           <div className="card_card3">
@@ -178,6 +161,19 @@ useEffect(() => {
             </div>
           </div>
           </Link>
+
+          <Link to={"/setAvatar"}>
+            <div className="card_card2">
+              <div className="container">
+                <img src={chatImage} alt="chatImage" />
+              </div>
+              <div className="details">
+                <h5>Chat with your new friends</h5>
+              </div>
+            </div>
+          </Link>
+
+     
 
           <Link to={'/#'} >
           <div className="card_card6">

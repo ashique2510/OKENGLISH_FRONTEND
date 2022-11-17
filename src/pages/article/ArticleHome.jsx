@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ArticleNav from '../../components/article/articleNav/ArticleNav'
-import { Card } from '../../components/article/blog/Card'
+import { Cards } from '../../components/article/blog/Cards'
 import Category from '../../components/article/category/Category'
 import axios from 'axios'
 import { getAllArticle } from '../../utils/ApiRoutes'
@@ -37,7 +37,7 @@ const ArticleHome = () => {
        { !search &&
          <Category article={article}/>    
        }   
-       <Card article={article} setLike={setLike}/>
+       <Cards article={article} setLike={setLike}/>
     </div>
   )
 }

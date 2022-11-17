@@ -21,9 +21,10 @@ import { useSelector } from 'react-redux'
   const [url ,setUrl] = useState('')
   const [uploadingImg, setUploadingImg] = useState(false)
   const [name , setName] = useState('')
+  const [ wait , setWait ] = useState(false)
+  const [ imgCheck ,setImgCheck] = useState(false)
 
   const navigate = useNavigate()
-
 
     
     const userDetails = useSelector(
@@ -33,6 +34,9 @@ import { useSelector } from 'react-redux'
 
 
   const handleSubmit = async (e) => {
+      
+      setImgCheck(true)
+
         e.preventDefault();
        
         setUsername(userDetails.user.email)
@@ -63,7 +67,8 @@ import { useSelector } from 'react-redux'
   }
 
         function handleOpenWidget(){
-
+               
+          setWait(true)
 
           var myWidget = window.cloudinary.createUploadWidget({
             cloudName: 'dtldzc9tg', 
@@ -72,6 +77,7 @@ import { useSelector } from 'react-redux'
                 console.log('Done! Here is the image info: ', result.info);
                 setUrl(result.info.url) 
                 setUploadingImg(true)
+                setWait(false)
               }
             }
           )
@@ -94,18 +100,48 @@ import { useSelector } from 'react-redux'
               <input type='text' accept='image/*' alt='img' />
             </div>
             <input type='text' placeholder='Title' onChange={e => setTitle(e.target.value)} />
-            <input type='text' placeholder='Category' onChange={e => setCategory(e.target.value)} />
+            {/* <input type='text' placeholder='Category' onChange={e => setCategory(e.target.value)} /> */}
+             <select className="select_category" onChange={e => setCategory(e.target.value)}>
+             <option disabled selected value> Select a Category  </option>
+              <option value="Lifestyle">Lifestyle</option>
+             <option value="Educational">Educational</option>
+             <option value="Travel">Travel</option>
+             <option value="Technology">Technology</option>
+             <option value="Food">Food</option>
+             <option value="Sports">Sports</option>
+             <option value="Music">Music</option>
+             <option value="Movie">Movie</option>
+             <option value="Art">Art</option>
+             <option value="Books">Books</option>
+             <option value="Politics">Politics</option>
+             <option value="Country">Country</option>
+             <option value="Adventures">Adventures</option>
+             <option value="Personal">Personal</option>
+             <option value="Childhood">Childhood</option>
+             <option value="Cooking">Cooking</option>
+             <option value="School_Life">School_Life</option>
+             <option value="College_Life">College_Life</option>
+             <option value="Story">Story</option>
+             <option value="Memories">Memories</option>
+             <option value="Achievments">Achievments</option>
+             <option value="Goals">Goals</option>
+             <option value="Others">Others</option>
+            </select>
 
-            {/* <textarea name='' id='' cols='30' rows='10'></textarea> */}
-            <JoditEditor ref={editor} onChange={(content) => setDescription(content)}  />
+            <textarea placeholder="Type content here.." onChange={e => setDescription(e.target.value)} name='description'  cols='30' rows='10'></textarea>
+            {/* <JoditEditor ref={editor} onChange={(content) => setDescription(content)}  /> */}
 
          <div>
 
-            {!url && <p>Please Upload an image before publishing your article</p>}
+            {!url && imgCheck && <p style={{color:'red',fontSize:'large',fontWeight:'bold'}}>Please Upload an image before publishing your article !!</p>}
 
         </div>
+            
+            {wait && (
+              <p style={{color:'green',fontSize:'large',fontWeight:'bold'}}>Please Wait Few Seconds !!</p>
+            )}
 
-            <button type="button" className="cloudinary_imgUpload" onClick={()=>handleOpenWidget()} disabled={uploadingImg}> Upload Image </button>
+            <button type="button" className="cloudinary_imgUpload_btn" onClick={()=>handleOpenWidget()} disabled={uploadingImg}> Upload Image </button>
           <div className="image_preview">
             { url &&
                    <img src={url} alt="img" />
@@ -113,7 +149,7 @@ import { useSelector } from 'react-redux'
           </div>
 
 
-            <button className='create_button' type="submit"  >Publish Article</button>
+            <button className='publish_button' type="submit"  >Publish Article</button>
 
           </form>
 

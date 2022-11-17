@@ -5,7 +5,7 @@ import "./style.css";
 import { Link , useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from "../../../redux-toolkit/auth/authSlice";
-import ArticleUser from "./ArticleUser";
+// import ArticleUser from "./ArticleUser";
 import { RiImageAddLine } from 'react-icons/ri'
 import { IoSettingsOutline } from 'react-icons/io5'
 import { BsBagCheck } from 'react-icons/bs'
@@ -26,19 +26,19 @@ const Menu = () => (
           <h4>Create Post</h4>
         </button>
       </Link>
-      <Link to='/create'>
+      <Link to='/my_account'>
         <button className="box">
           <IoSettingsOutline className="icon" />
           <h4>My Account</h4>
         </button>
       </Link>
-      <Link to='/create'>
+      <Link to='#'>
         <button className="box">
           <BsBagCheck className="icon" />
           <h4>Content</h4>
         </button>
       </Link>
-      <Link to='/create'>
+      <Link to='#'>
         <button className="box">
           <AiOutlineHeart className="icon" />
           <h4>Saved</h4>
@@ -90,7 +90,7 @@ const onLogout = () => {
 
           <div className="okEng__navbar-sign">
            <div className="account flexCenter">
-            <ArticleUser />
+            {/* <ArticleUser /> */}
            </div>
            </div>
 
@@ -128,7 +128,7 @@ const onLogout = () => {
             <div className="okEng__navbar-menu_container-links">
               <Menu />
               <div className="account flexCenter">
-            <ArticleUser />
+            {/* <ArticleUser /> */}
                </div>
             </div>
           </div>
