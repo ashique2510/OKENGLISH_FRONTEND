@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './header.css'
 import announcement from '../../assets/announcment.jpg'
 import chatImage from '../../assets/chatimage.jpg'
+import call from '../../assets/call.jpg'
 import article from '../../assets/article.png'
 import booking from '../../assets/booking.png'
 import SocialMedia from '../../assets/SocialMedia.png'
@@ -169,6 +170,17 @@ useEffect(() => {
               </div>
               <div className="details">
                 <h5>Chat with your new friends</h5>
+              </div>
+            </div>
+          </Link>
+
+          <Link to={"/calling_mode"}>
+            <div className="card_card7">
+              <div className="container">
+                <img src={call} alt="chatImage" />
+              </div>
+              <div className="details">
+                <h5>Call with your new friends</h5>
               </div>
             </div>
           </Link>

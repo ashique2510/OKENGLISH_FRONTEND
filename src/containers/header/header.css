@@ -222,6 +222,16 @@ margin-top: 1.5rem;
         #110624
     );
 }
+
+.card_card7>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        #c1e783,
+        #031b0b
+    );
+}
+
+
 .details{
     padding: 20px 10px;
     cursor: pointer;

@@ -9,6 +9,8 @@ import SetAvatar from './components/chatComponents/SetAvatar';
 import ArticleHome from './pages/article/ArticleHome';
 import DetailsPage from './pages/article/DetailsPage';
 import BookingPage from './pages/bookingPage/BookingPage';
+import CallingModePage from './pages/calling/CallingModePage';
+import TelegramSetupPage from './pages/calling/TelegramSetupPage';
 import Chat from './pages/chat/Chat';
 // import {Footer,Blog,Possibility,Features,LearningStrategy,Header} from './containers'
 import Home from './pages/home/Home'
@@ -19,6 +21,7 @@ import MyAccount from './pages/myAccount/MyAccount';
 import SocialMediaPage from './pages/socialMedia/SocialMediaPage';
 import { Footer } from './components/article/footer/Footer';
 import { Payment } from './components/booking/Payment';
+import CommingSoon from './components/CommingSoon';
 
 
 const App = () => {
@@ -41,6 +44,10 @@ const App = () => {
             <Route path='/booking_payment' element={<Payment />} />
             <Route path='/my_account' element={<MyAccount />} />
             <Route path='/social_media' element={<SocialMediaPage />} />
+            <Route path='/calling_mode' element={<CallingModePage />} />
+            <Route path='/telegram_setup' element={<TelegramSetupPage />} />
+            <Route path='/commingsoon' element={<CommingSoon />} />
+
 
           </Routes>
           {/* <Footer /> */}
