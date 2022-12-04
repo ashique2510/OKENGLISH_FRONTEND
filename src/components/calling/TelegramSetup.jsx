@@ -90,11 +90,11 @@ export const TelegramSetup = () => {
 
           <Box >
 
-          <TextField style={{background:'#fff' ,borderRadius:'10px', width:'400px'}} id="standard-basic" label="Please type your telegram username..." variant="standard"  />
+          <TextField style={{background:'#fff' ,borderRadius:'10px', width:'370px'}} id="standard-basic" label="Please type your telegram username..." variant="standard"  />
 
           </Box>
 
-          <Button 
+          <Button href="https://t.me/James6061"
             variant="contained"
             sx={{ width: "160px", height: "50px", marginTop:'25px', marginLeft:'20px',marginBottom:'25px' ,borderRadius:'10px' , background: "#229ED9" , '&:hover': {
               background: "#229ED9",
