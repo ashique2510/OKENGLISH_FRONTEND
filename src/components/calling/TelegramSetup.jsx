@@ -7,6 +7,7 @@ import {IoLogoGooglePlaystore} from 'react-icons/io5'
 import telegramImg1 from '../../assets/telegramImg1.jpeg'
 import telegramImg2 from '../../assets/telegramImg2.jpeg'
 import telegramImg3 from '../../assets/telegramImg3.jpeg'
+import { Link } from "react-router-dom";
 
 
 
@@ -94,7 +95,8 @@ export const TelegramSetup = () => {
 
           </Box>
 
-          <Button href="https://t.me/James6061"
+         <Link to={'/calling_home'}>
+          <Button 
             variant="contained"
             sx={{ width: "160px", height: "50px", marginTop:'25px', marginLeft:'20px',marginBottom:'25px' ,borderRadius:'10px' , background: "#229ED9" , '&:hover': {
               background: "#229ED9",
@@ -104,7 +106,7 @@ export const TelegramSetup = () => {
           >
             Submit
           </Button>
-
+          </Link>
           
           
         </Grid>

@@ -11,6 +11,7 @@ import DetailsPage from './pages/article/DetailsPage';
 import BookingPage from './pages/bookingPage/BookingPage';
 import CallingModePage from './pages/calling/CallingModePage';
 import TelegramSetupPage from './pages/calling/TelegramSetupPage';
+import CallingHomePage from './pages/calling/CallingHomePage';
 import Chat from './pages/chat/Chat';
 // import {Footer,Blog,Possibility,Features,LearningStrategy,Header} from './containers'
 import Home from './pages/home/Home'
@@ -46,6 +47,7 @@ const App = () => {
             <Route path='/social_media' element={<SocialMediaPage />} />
             <Route path='/calling_mode' element={<CallingModePage />} />
             <Route path='/telegram_setup' element={<TelegramSetupPage />} />
+            <Route path='/calling_home' element={<CallingHomePage />} />
             <Route path='/commingsoon' element={<CommingSoon />} />
 
 

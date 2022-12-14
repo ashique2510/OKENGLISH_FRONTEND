@@ -187,7 +187,7 @@ useEffect(() => {
 
      
 
-          <Link to={'/#'} >
+          <Link to={'/commingsoon'} >
           <div className="card_card6">
             <div className="container">
               <img src={Test} alt="test" />
