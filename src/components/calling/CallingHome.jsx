@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Badge,
   Box,
   Button,
   Card,
@@ -15,6 +16,8 @@ import { GrStatusGood } from "react-icons/gr";
 import { IoCall } from "react-icons/io5"; 
 import { AiOutlineMessage } from "react-icons/ai"; 
 
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+
 
 const CallingHome = () => {
   return (
@@ -28,10 +31,21 @@ const CallingHome = () => {
           justifyContent="center"
         >
 
-          <Box marginBottom={7} bgcolor='#431658' margin={2} borderRadius={3} paddingTop={2} paddingBottom={2} >
+          <Box marginBottom={7} margin={2} borderRadius={3} paddingTop={2} paddingBottom={2}  sx={{ background: 'linear-gradient(45deg, #740491, transparent), radial-gradient(red, transparent)'
+          }} >
 
-          <Typography marginBottom={1} color="white" variant="h6">
-            Please click this button as per your availability
+                       <Typography marginBottom={1}>NOTIFICATIONS</Typography>
+
+                <Badge color="success" overlap="circular" badgeContent="0">
+                  < NotificationsActiveIcon style={{
+                          fontSize: "33px",
+                          color: "#f7c82d",
+                        }} />
+
+                </Badge>
+
+          <Typography marginBottom={1} color="white" fontSize='17px'>
+          Please click this button if you are available
           </Typography>
 
           <Button
@@ -72,11 +86,11 @@ const CallingHome = () => {
             </p>
           </Button>
 
-          <Typography marginTop="12px" color="white" variant="h5">
-            My Status
+          <Typography marginTop="12px" marginBottom={1} color="white" variant="h6">
+            My current Status
           </Typography>
 
-          <Typography color="#fa0606" fontSize="30px"  fontWeight={900}>
+          <Typography color="#fa0606" bgcolor='#f7e0e0' display={"inline"} borderRadius={2} padding='5px' fontSize="24px"  fontWeight={900}>
             I am not available right now
           </Typography>
 
@@ -92,10 +106,9 @@ const CallingHome = () => {
             <Card style={{ background: "#fff", minWidth: "350px" }}>
               <CardActionArea>
                 <CardContent>
-                  <Box display="flex" alignItems="center" marginLeft={1}>
-                    <Avatar sx={{ background: "red" }} aria-label="recipe">
-                      A
-                    </Avatar>
+                  <Box display="flex" alignItems="center" >
+                    <Avatar sx={{width:'55px', height:'55px', border:'2px solid green'}} src='https://i.pinimg.com/736x/c9/e3/e8/c9e3e810a8066b885ca4e882460785fa.jpg' aria-label="recipe" />
+                     
                     <Typography color="black" marginLeft={1}>
                       Ashique C
                     </Typography>
@@ -124,10 +137,9 @@ const CallingHome = () => {
             <Card style={{ background: "#fff", minWidth: "350px" }}>
               <CardActionArea>
                 <CardContent>
-                  <Box display="flex" alignItems="center" marginLeft={1}>
-                    <Avatar sx={{ background: "red" }} aria-label="recipe">
-                      A
-                    </Avatar>
+                  <Box display="flex" alignItems="center" >
+                    <Avatar sx={{width:'55px', height:'55px', border:'2px solid red'}} src="https://fcb-abj-pre.s3.amazonaws.com/img/jugadors/MESSI.jpg" aria-label="recipe" />
+                      
                     <Typography color="black" marginLeft={1}>
                       Ashique Mohammed C
                     </Typography>
