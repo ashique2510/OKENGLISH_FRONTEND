@@ -22,7 +22,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-export const Payment = () => {
+ const Payment = () => {
 
   const navigate = useNavigate()
 
@@ -182,3 +182,5 @@ export const Payment = () => {
     </Box>
   )
 }
+
+export default Payment

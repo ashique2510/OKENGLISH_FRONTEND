@@ -1,14 +1,13 @@
-import React from 'react'
-import CallingHome from '../../components/calling/CallingHome'
-import Navbar from '../../components/navbar/Navbar'
+import React from 'react';
+import { CallingHome, Navbar } from '../../components';
 
 const CallingHomePage = () => {
   return (
     <div>
-        <Navbar />
-        <CallingHome />
+      <Navbar />
+      <CallingHome />
     </div>
-  )
-}
+  );
+};
 
-export default CallingHomePage
+export default CallingHomePage;

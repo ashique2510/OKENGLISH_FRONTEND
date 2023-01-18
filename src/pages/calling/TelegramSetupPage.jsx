@@ -1,14 +1,13 @@
-import React from 'react'
-import Navbar from '../../components/navbar/Navbar'
-import { TelegramSetup } from '../../components/calling/TelegramSetup'
+import React from 'react';
+import { Navbar, TelegramSetup } from '../../components';
 
 const TelegramSetupPage = () => {
   return (
     <div>
-            <Navbar />
-            <TelegramSetup />
+      <Navbar />
+      <TelegramSetup />
     </div>
-  )
-}
+  );
+};
 
-export default TelegramSetupPage
+export default TelegramSetupPage;

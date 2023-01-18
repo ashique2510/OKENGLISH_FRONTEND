@@ -4,7 +4,7 @@ import { BsFacebook } from "react-icons/bs"
 import { RiInstagramFill } from "react-icons/ri"
 import './footer.css'
 
-export const Footer = () => {
+ const Footer = () => {
   return (
     <>
       <footer className='footer_boxItems'>
@@ -21,3 +21,5 @@ export const Footer = () => {
     </>
   )
 }
+
+export default Footer

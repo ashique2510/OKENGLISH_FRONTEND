@@ -1,0 +1,15 @@
+export { default as Chat } from './chat/Chat';
+export { default as Home } from './home/Home';
+export { default as LoginPage } from './login/LoginPage';
+export { default as SignUpPage } from './signUp/SignUpPage';
+export { default as MyAccount } from './myAccount/MyAccount';
+export { default as CreatePage } from './article/CreatePage';
+export { default as AccountInfo } from './article/AccountInfo';
+export { default as ArticleHome } from './article/ArticleHome';
+export { default as DetailsPage } from './article/DetailsPage';
+export { default as BookingPage } from './bookingPage/BookingPage';
+export { default as CallingModePage } from './calling/CallingModePage';
+export { default as CallingHomePage } from './calling/CallingHomePage';
+export { default as TelegramSetupPage } from './calling/TelegramSetupPage';
+export { default as SocialMediaPage } from './socialMedia/SocialMediaPage';
+export { default as SelectPlanPage } from './selectPlanPage/SelectPlanPage';

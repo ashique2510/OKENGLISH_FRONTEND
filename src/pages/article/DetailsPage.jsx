@@ -1,14 +1,13 @@
-import React from 'react'
-import ArticleNav from '../../components/article/articleNav/ArticleNav'
-import { Details } from '../../components/article/details/Details'
+import React from 'react';
+import { ArticleNav, Details } from '../../components';
 
 const DetailsPage = () => {
   return (
     <div>
-        <ArticleNav />
-        <Details />
+      <ArticleNav />
+      <Details />
     </div>
-  )
-}
+  );
+};
 
-export default DetailsPage
+export default DetailsPage;

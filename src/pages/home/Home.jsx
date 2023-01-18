@@ -1,8 +1,7 @@
 import React from 'react'
 import './home.css'
 import { Navbar } from '../../components'
-import { Header } from '../../containers'
-
+import Header from '../../containers/header/Header'
 
 function Home() {
   return (

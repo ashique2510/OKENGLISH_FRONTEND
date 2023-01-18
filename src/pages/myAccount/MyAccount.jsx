@@ -1,7 +1,5 @@
 import React from 'react'
-import { Navbar } from '../../components'
-import { Account } from '../../components/accountInfo/Account'
-
+import {Account, Navbar } from '../../components'
 
 function MyAccount() {
   return (

@@ -1,14 +1,13 @@
-import React from 'react'
-import { CallingMode } from '../../components/calling/CallingMode'
-import Navbar from '../../components/navbar/Navbar'
+import React from 'react';
+import { Navbar, CallingMode } from '../../components';
 
 const CallingModePage = () => {
   return (
     <div>
-            <Navbar />
-            <CallingMode />
+      <Navbar />
+      <CallingMode />
     </div>
-  )
-}
+  );
+};
 
-export default CallingModePage
+export default CallingModePage;

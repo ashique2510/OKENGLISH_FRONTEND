@@ -1,14 +1,13 @@
-import React from 'react'
-import ArticleNav from '../../components/article/articleNav/ArticleNav'
-import Creat from '../../components/article/create/Create'
+import React from 'react';
+import { ArticleNav, Creat } from '../../components';
 
 function CreatePage() {
   return (
     <div>
-        <ArticleNav />
-         <Creat />
+      <ArticleNav />
+      <Creat />
     </div>
-  )
+  );
 }
 
-export default CreatePage
+export default CreatePage;

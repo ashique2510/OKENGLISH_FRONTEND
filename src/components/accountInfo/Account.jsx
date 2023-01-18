@@ -7,9 +7,8 @@ import { getProfilePic } from "../../utils/ApiRoutes"
 import {  useSelector } from "react-redux"
 
 
-export const Account = () => {
+const Account = () => {
 
-  console.log('hiiiiiiiiiiiiiiii');
 
   const [url ,setUrl] = useState(false)
   const [uploadingImg, setUploadingImg] = useState(false)
@@ -18,7 +17,6 @@ export const Account = () => {
 
 
   const profileImage = useSelector( state => state.globalData.profilePicture)
-          console.log('profile ppiicctturre',profileImage);
 
 
     const UserId = useSelector(
@@ -114,3 +112,5 @@ console.log('uuurlll',url);
     </>
   )
 }
+
+export default Account;

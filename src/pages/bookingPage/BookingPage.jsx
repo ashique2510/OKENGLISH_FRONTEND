@@ -1,16 +1,13 @@
-import React from 'react'
-import { Navbar } from '../../components'
-import TrainersList from '../../components/booking/TrainersList'
-
+import React from 'react';
+import { Navbar, TrainersList } from '../../components';
 
 const BookingPage = () => {
   return (
     <div>
-        <Navbar />
-        <TrainersList />
-      
+      <Navbar />
+      <TrainersList />
     </div>
-  )
-}
+  );
+};
 
-export default BookingPage
+export default BookingPage;
