@@ -30,7 +30,7 @@ export default function Chat() {
   }, []);
   useEffect(() => {
     if (currentUser) {
-      socket.current = io('http://localhost:8000');
+      socket.current = io('https://ruby-jolly-hippopotamus.cyclic.app');
       socket.current.emit('add-user', currentUser._id);
     }
   }, [currentUser]);
