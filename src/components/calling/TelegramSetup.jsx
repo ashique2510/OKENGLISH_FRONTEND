@@ -1,6 +1,6 @@
 import { Grid, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import { IoLogoGooglePlaystore } from 'react-icons/io5';
 import telegramImg1 from '../../assets/telegramImg1.jpeg';
@@ -9,10 +9,13 @@ import telegramImg3 from '../../assets/telegramImg3.jpeg';
 import { addTelegramUserName } from '../../utils/ApiRoutes';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
  const TelegramSetup = () => {
   const [userName, setUserName] = useState('');
-  const UserId = useSelector((state) => state.auth.user._id);
+
+
+  const UserId = useSelector((state) => state.auth.user?._id);
 
   const handleSubmit = (e) => {
     e.preventDefault();
